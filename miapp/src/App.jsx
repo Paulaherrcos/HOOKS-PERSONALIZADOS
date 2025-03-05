@@ -5,12 +5,14 @@ import './App.css'
 import Formulario from './Ejercicios/Formulario'
 import FetchData from './Ejercicios/FetchData'
 import Contador from './Ejercicios/Contador'
+import Toggle from './Ejercicios/Toggle'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <Toggle/>
       <Contador/>
       <FetchData/>
       <Formulario/>
