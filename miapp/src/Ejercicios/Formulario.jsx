@@ -1,8 +1,8 @@
 import React from 'react'
-import HooksPersFormulario from './../componentesHooksPerson/HooksPersFormulario'
+import UseFormulario from '../componentesHooksPersonalizados/UseFormulario'
 
 const Formulario = () => {
-    const{values, error,envio, handleChange, handleSubmit, resetForm}=HooksPersFormulario(
+    const{values, error,envio, handleChange, handleSubmit, resetForm}=UseFormulario(
         {nombre:''},
         (values)=>{
             const errors={};

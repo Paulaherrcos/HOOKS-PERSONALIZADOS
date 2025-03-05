@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function HooksPersFormulario(initialValue, validate){
+function UseFormulario(initialValue, validate){
     const [values, setValue]=useState(initialValue);
     const [error,setError]=useState({});
     const [envio, setEnvio]=useState(null);
@@ -32,4 +32,4 @@ function HooksPersFormulario(initialValue, validate){
   return {values, error, envio, handleChange, handleSubmit, resetForm};
 }
 
-export default HooksPersFormulario
+export default UseFormulario

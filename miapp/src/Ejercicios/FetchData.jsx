@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import UseFetchDatos from '../componentesHooksPerson/UseFetchDatos'
+import UseFetchDatos from '../componentesHooksPersonalizados/UseFetchDatos'
 
 function FetchData(){
     

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const HooksPersToggle = () => {
+const UseToggle = () => {
   return (
     <div>HooksPersToggle</div>
   )
 }
 
-export default HooksPersToggle
+export default UseToggle

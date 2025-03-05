@@ -1,9 +1,9 @@
 import React from 'react'
 
-const HooksPersLigthDark = () => {
+const UseLigthDark = () => {
   return (
     <div>HooksPersLigthDark</div>
   )
 }
 
-export default HooksPersLigthDark
+export default UseLigthDark

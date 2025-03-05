@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 // el parámetro validate no es necesario en este caso ya que recibo los datos de la api, en el caso de un formulario si es necesario yaque debo verificar los datos del input
-function HooksPersonFetchDatos(url=null){
+function UseFetchDatos(url=null){
     const [data,setData]=useState(null);
     const [loading,setLoading]=useState(true);
     const [error,setError]=useState(null);
@@ -22,4 +22,4 @@ function HooksPersonFetchDatos(url=null){
   return{data, loading, error};
 }
 
-export default HooksPersonFetchDatos
+export default UseFetchDatos

@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Formulario from './Ejercicios/Formulario'
 import FetchData from './Ejercicios/FetchData'
+import Contador from './Ejercicios/Contador'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <Contador/>
       <FetchData/>
       <Formulario/>
     </>

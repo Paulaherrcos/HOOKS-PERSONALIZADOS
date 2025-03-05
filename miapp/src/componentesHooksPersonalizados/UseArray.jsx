@@ -1,9 +1,9 @@
 import React from 'react'
 
-const HooksPersArray = () => {
+const UseArray = () => {
   return (
     <div>HooksPersArray</div>
   )
 }
 
-export default HooksPersArray
+export default UseArray
