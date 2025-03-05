@@ -7,12 +7,14 @@ import FetchData from './Ejercicios/FetchData'
 import Contador from './Ejercicios/Contador'
 import Toggle from './Ejercicios/Toggle'
 import LigthDark from './Ejercicios/LigthDark'
+import Array from './Ejercicios/Array'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <Array/>
     <LigthDark/>
       <Toggle/>
       <Contador/>
