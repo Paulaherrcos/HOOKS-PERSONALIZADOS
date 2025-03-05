@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
-const HooksPersFormulario = (initialValue) => {
+function HooksPersFormulario(initialValue, validate){
     const [values, setValue]=useState(initialValue);
     const [error,setError]=useState({});
+    const [envio, setEnvio]=useState(null);
 
 
     const handleChange = (e)=>{
@@ -11,21 +12,24 @@ const HooksPersFormulario = (initialValue) => {
     };
 
     const resetForm = (e)=>{
-        setformulario("");
+        //como values es un objeto {...} debo resetearlo a initialValue
+        setValue(initialValue);
     };
 
     const handleSubmit = (e)=>{
-        e.preventdefault();
+        e.preventDefault();
         const validarErrores=validate(values);
         setError(validarErrores);
     if(Object.keys(validarErrores).length===0){
         console.log('Formulario enviado', values);
+        setEnvio("Formulario enviado");
+        resetForm();
     }
     };
 
 
 
-  return {values, error, handleChange, handleSubmit, resetForm};
+  return {values, error, envio, handleChange, handleSubmit, resetForm};
 }
 
 export default HooksPersFormulario

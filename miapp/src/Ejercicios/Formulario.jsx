@@ -1,12 +1,13 @@
 import React from 'react'
+import HooksPersFormulario from './../componentesHooksPerson/HooksPersFormulario'
 
 const Formulario = () => {
-    const{values, errors, handleChange, handleSubmit, resetForm}=HooksPersFormulario(
+    const{values, error,envio, handleChange, handleSubmit, resetForm}=HooksPersFormulario(
         {nombre:''},
         (values)=>{
-            const error={};
-            if(!values.nombre) error.nombre='El nombre es obligatorio';
-            return error;
+            const errors={};
+            if(!values.nombre) errors.nombre='El nombre es obligatorio';
+            return errors;
         }
     )
 
@@ -16,6 +17,8 @@ const Formulario = () => {
         <input type="text"
         name='nombre' value={values.nombre}
         onChange={handleChange} placeholder='Nombre' />
+        {/* ternaria si sale el error, si no ponme el mensaje de envío */}
+        {error.nombre ? (<p>{error.nombre}</p>) : (<p>{envio}</p>)}
         <button type='submit'>Enviar</button>
     </form>
   )
